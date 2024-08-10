@@ -1,0 +1,91 @@
+""" fonksiyonların ne yaptığını anlamak için olan sorgu komutumuz : "?"
+comment line da istediğimiz kadar yazabilmek için 3 tane tırnak işareti  """
+def square(x):
+    """
+    x'in karesini hesaplar
+    """
+    return x * x
+
+# ?square  yazıldığında : "x'in karesini hesaplar" vermesi lazım
+
+# birden çok outputu olan fonksiyonlar :
+def f(x):
+    return 2*x, 10*x
+
+print(f(10))      # (20, 10)  : bana sonucu tuple olarak döndürdü
+
+# variable unpacking'te gördüğümüz gibi bu iki değeri farklı değişkene eşitleyebilirim
+a, b = f(10)
+print(a)
+print(b)
+
+def f(x,y):
+    return 2*x*y, (10*x)**y     # "**" işareti üzeri anlamında
+
+
+# Predefined Methods
+# sana özellikle şu değeri yerine al diye belirtmedikçe 
+# benim sana önceden söylediğim değeri al
+def hello(end, start = "Hello"):  
+    #kullanıcı sana özellikle start yerine ("Hello") alma demedikçe sen Hello al
+    print(start + + end)
+
+print(hello("Denis"))                  # Hello Denis
+print(hello("Denis", start = "Hey"))   # Hey Denis
+print(hello("Denis", "Hey"))           # Hey Denis   start diye özellikle yazmamıza gerek yok
+print(hello("Denis"))                  # Hello Denis
+
+
+def power(x, y=1):
+    return x ** y
+print(power (3))       # 3
+print(power (4, 2))    # 16
+
+# Aksini belirtmezsek predefined değerleri kullanacak fonksiyon 
+# # predefined olarak vereceğimiz değerleri en sona yazmalıyız yoksa hata alırız 
+
+# HATALI : def hello(start = "Hello", end): print(start + end)
+
+
+# Bir değişken ile fonksiyon çağırdığımda ;
+a = 2
+
+# def d(c): c = 4 return c
+# print(fu(a))
+
+
+# fonksiyonun içinde yaptığımız işlemler ile a'nın değeri değişir mi ?
+# cevap : değişmez
+# ama listeler için farklı değişir
+
+l = [1, 2, 3]
+l2 = l
+l2 [0] = [10]    # yaptığımızda l'de değişir çünkü bu etiket tutuyor
+
+def c(l):
+    l[0] = "a"
+    return l
+
+print(c(l))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
